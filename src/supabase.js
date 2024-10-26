@@ -1,6 +1,7 @@
+/* eslint-disable no-undef */
 // src/supabase.js
 import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = 'https://your-supabase-url.supabase.co';
-const supabaseAnonKey = 'your-anon-key';
+const supabaseUrl = process.env.supabaseUrl;
+const supabaseAnonKey = process.env.supabaseAnonKey;
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);
