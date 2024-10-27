@@ -1,6 +1,6 @@
 // src/App.js
 import { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import {  Route, Routes } from 'react-router-dom';
 import { supabase } from './supabase'; // Import Supabase client
 import Login from './components/login';
 import ProjectList from './components/projectlist';
@@ -24,13 +24,11 @@ function App() {
   };
 
   return (
-    <Router>
       <Routes>
         <Route path="/" element={<Login onUserIdChange={handleUserIdChange} onLogout={handleLogout} />} />
         <Route path="/projects" element={<ProjectList userId={userId} onLogout={handleLogout} />} />
         <Route path="/projects/:id" element={<ProjectView onLogout={handleLogout} />} />
       </Routes>
-    </Router>
   );
 }
 
