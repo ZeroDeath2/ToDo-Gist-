@@ -2,9 +2,9 @@
 import { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { supabase } from './supabase'; // Import Supabase client
-import Login from './components/Login';
-import ProjectList from './components/ProjectList';
-import ProjectView from './components/ProjectView';
+import Login from './components/login';
+import ProjectList from './components/projectlist';
+import ProjectView from './components/projectview';
 
 function App() {
   const [userId, setUserId] = useState(null); // State to hold the user ID
