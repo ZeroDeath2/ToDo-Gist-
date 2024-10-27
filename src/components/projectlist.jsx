@@ -102,7 +102,7 @@ export default function ProjectList() {
     try {
       const { error } = await supabase.auth.signOut();
       if (error) throw error;
-      navigate('/login');
+      navigate('/');
     } catch (error) {
       console.error('Error logging out:', error.message);
     }

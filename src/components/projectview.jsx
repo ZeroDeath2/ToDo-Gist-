@@ -54,7 +54,7 @@ export default function ProjectView() {
     try {
       const { error } = await supabase.auth.signOut();
       if (error) throw error;
-      window.location.href = "/login";
+      window.location.href = "/";
     } catch (error) {
       console.error("Error signing out:", error.message);
     }
@@ -224,7 +224,7 @@ ${todos
             <div className="card-header bg-primary text-white d-flex justify-content-between align-items-center">
               <h4 className="mb-0">{project?.title || "Loading..."}</h4>
               <button
-                onClick={() => navigate("/")}
+                onClick={() => navigate("/projects")}
                 className="btn btn-outline-light btn-sm"
               >
                 Back

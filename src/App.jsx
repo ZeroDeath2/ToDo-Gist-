@@ -26,8 +26,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<ProjectList userId={userId} onLogout={handleLogout} />} />
-        <Route path="/login" element={<Login onUserIdChange={handleUserIdChange} onLogout={handleLogout} />} />
+        <Route path="/" element={<Login onUserIdChange={handleUserIdChange} onLogout={handleLogout} />} />
+        <Route path="/projects" element={<ProjectList userId={userId} onLogout={handleLogout} />} />
         <Route path="/projects/:id" element={<ProjectView onLogout={handleLogout} />} />
       </Routes>
     </Router>
