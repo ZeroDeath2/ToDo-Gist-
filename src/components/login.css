@@ -1,0 +1,64 @@
+/* General body styles */
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+/* Center container */
+.min-vh-100 {
+    min-height: 100vh;
+}
+
+/* Title styles */
+h1 {
+    font-size: 4rem; /* Large font size for the title */
+    font-weight: bold;
+    color: #343a40; /* Darker text color for contrast */
+}
+
+/* Button styles */
+.btn-outline-secondary {
+    background-color: white; /* White background for the button */
+    border-color: #6c757d; /* Border color */
+    color: #6c757d; /* Text color */
+    padding: 10px 20px; /* Padding around the button */
+    font-size: 1.2rem; /* Slightly larger font size for the button */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+.btn-outline-secondary:hover {
+    background-color: #6c757d; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+}
+
+/* Alert styles */
+.alert {
+    margin-bottom: 20px; /* Space between alert and button */
+}
+
+/* Footer styles */
+footer {
+    position: relative;
+    bottom: 0;
+    height: 20vh;
+    width: 100%; /* Full width for footer */
+    padding: 20px 0; /* Padding for footer */
+}
+
+/* Footer text styles */
+footer p {
+    margin: 0; /* Remove default margin */
+    color: #343a40; /* Darker color for footer text */
+}
+
+/* Link styles */
+footer a {
+    color: #007bff; /* Blue link color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underline link on hover */
+}
