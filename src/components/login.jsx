@@ -10,8 +10,8 @@ export default function Login() {
       const { error } = await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
-            redirectTo: 'https://to-do-gist.vercel.app/projects'
-          }          
+            redirectTo: `${window.location.origin}/projects`,
+        }          
       });
       if (error) throw error;
     } catch (err) {
