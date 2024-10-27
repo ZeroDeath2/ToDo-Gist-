@@ -27,7 +27,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route
-          path="/projects"
+          path="/projects#"
           element={<ProjectList userId={userId} onLogout={handleLogout} />}
         />
         <Route
