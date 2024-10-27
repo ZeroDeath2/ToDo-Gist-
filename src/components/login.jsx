@@ -10,7 +10,7 @@ export default function Login() {
       const { error } = await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
-            redirectTo: 'https://tosimplido.netlify.app/projects'
+            redirectTo: 'https://to-do-gist.vercel.app/projects'
           }          
       });
       if (error) throw error;
@@ -23,7 +23,7 @@ export default function Login() {
     <div className="min-vh-100 d-flex flex-column align-items-center justify-content-center">
       <div className="text-center">
         <h1 className="display-1 mb-3">ToSimpliDo</h1>
-        <h5 className="display-7 mb-5">One stop solution to your good old to-do's</h5>
+        <h5 className="display-7 mb-5">One stop solution to your good old to-do&apos;s</h5>
         {error && (
           <div className="alert alert-danger text-center small mb-4" role="alert">
             {error}
