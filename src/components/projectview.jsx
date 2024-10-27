@@ -3,7 +3,7 @@ import { supabase } from "../supabase";
 import { useParams, useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import exportAsGist from "./exportgist";
+import exportAsGist from "./ExportGist";
 
 export default function ProjectView() {
   const { id } = useParams();
