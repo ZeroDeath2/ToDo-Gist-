@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { HashRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { supabase } from "./supabase"; // Import Supabase client
 import Login from "./components/login";
 import ProjectList from "./components/projectlist";
 import ProjectView from "./components/projectview";
+
 const App = () => {
   const [userId, setUserId] = useState(null); // State to hold the user ID
 
@@ -24,23 +25,12 @@ const App = () => {
   return (
     <Router>
       <Routes>
+        <Route path="/" element={<Login />} />
         <Route
-          exact
-          path="/"
-          element={
-            <Login
-              onUserIdChange={handleUserIdChange}
-              onLogout={handleLogout}
-            />
-          }
-        />
-        <Route
-          exact
           path="/projects"
           element={<ProjectList userId={userId} onLogout={handleLogout} />}
         />
         <Route
-          exact
           path="/projects/:id"
           element={<ProjectView onLogout={handleLogout} />}
         />

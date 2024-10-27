@@ -1,5 +1,4 @@
 /* eslint-disable no-undef */
-// vite.config.js
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import dotenv from 'dotenv';
@@ -10,5 +9,11 @@ export default defineConfig({
   plugins: [react()],
   define: {
     'process.env': process.env, // Expose the env variables to the client
+  },
+  build: {
+    outDir: 'dist', // This must match Netlify's publish directory
+  },
+  server: {
+    open: true, // Optional: Automatically opens the browser
   },
 });
