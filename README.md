@@ -2,7 +2,7 @@
 # ToSimpliDo
 
 ToSimpliDo is a user-friendly web application designed to help you manage your tasks effectively. It provides both email authentication and Google login options to ensure a seamless user experience.
-Live Demo: [Here](tosimplido.netlify.app)
+Live Demo: [Here](https://tosimplido.netlify.app)
 
 ## Table of Contents
 
